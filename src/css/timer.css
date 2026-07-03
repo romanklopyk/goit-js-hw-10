@@ -1,0 +1,37 @@
+.timer-container{
+  padding: 20px;
+}
+
+.timer-container > :is(input, button) {
+  font-size: 20px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.timer-container > button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.timer{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-size: 20px;
+
+}
+
+.field{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /*border: 1px solid black;*/
+}
+
+.field .value{
+  font-size: 40px;
+}
+

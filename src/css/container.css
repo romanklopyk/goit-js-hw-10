@@ -1,9 +1,10 @@
 /* Styles for Mobile devices */
 .container {
-  min-width: 320px;
+  /*min-width: 320px;*/
   max-width: 375px;
   margin: 0 auto;
   padding: 0 16px;
+  /*background-color: #47caff;*/
 }
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
@@ -16,4 +17,14 @@
   .container {
     max-width: 1200px;
   }
+}
+
+
+.go-back{
+  margin-top: auto;
+  /*background-color: #41d1ff;*/
+}
+
+.homework{
+
 }
