@@ -31,7 +31,7 @@ const options = {
         }
         else {
             disableEl($button);
-            showMessage('Please select a date in the future')
+            showMessage('Please choose a date in the future')
             clearInterval(intervalId);
             renderTimer()
         }
@@ -44,6 +44,8 @@ $button.addEventListener('click', (e) => {
     e.preventDefault();
     if (targetDate) {
         handleTimer(targetDate);
+        disableEl($button);
+        disableEl($input);
     } else {
         showMessage('Please select a date');
     }
@@ -56,6 +58,8 @@ function handleTimer(selectedDates) {
         if (new Date().getTime() - target >= 0) {
             clearInterval(intervalId);
             renderTimer({ days: 0, hours: 0, minutes: 0, seconds: 0})
+            enableEl($button);
+            enableEl($input);
             return;
         }
         const time = convertMs(target - new Date().getTime());

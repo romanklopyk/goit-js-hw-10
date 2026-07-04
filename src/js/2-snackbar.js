@@ -17,21 +17,21 @@ function handleForm(formData) {
     const formPromise = new Promise((resolve, reject) => {
         setTimeout(() => {
             if (state === 'fulfilled') {
-                resolve();
+                resolve(delay);
             } else if (state === 'rejected') {
-                reject();
+                reject(delay);
             }
         }, delay);
     })
-    formPromise.then(() => {
+    formPromise.then((delay) => {
         iziToast.success({
-            message: 'Form submitted successfully',
+            message: `Fulfilled promise in ${delay}ms`,
             position: 'topRight',
 
         });
-    }).catch(() => {
+    }).catch((delay) => {
         iziToast.error({
-            message: 'Form submission failed',
+            message: `Rejected promise in ${delay}ms`,
             position: 'topRight',
         })
     })
