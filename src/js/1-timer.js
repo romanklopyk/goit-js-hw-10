@@ -58,7 +58,7 @@ function handleTimer(selectedDates) {
         if (new Date().getTime() - target >= 0) {
             clearInterval(intervalId);
             renderTimer({ days: 0, hours: 0, minutes: 0, seconds: 0})
-            enableEl($button);
+
             enableEl($input);
             return;
         }
